@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="54.778">
+    <testcase classname="n11 Mobil Uygulamasi" name="n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu" time="54.341">
+        <system-out><![CDATA[When Kategorilere tiklanir..................................................passed
+When Elektronik tiklanir....................................................passed
+When TelefonveAksesuarlari Secilir..........................................passed
+When Cep telefonu secilir...................................................passed
+When Marka secilir..........................................................passed
+When Filtrelemeye tiklanir..................................................passed
+When Filtreleme yapilir.....................................................passed
+When Sonuclarigostere tiklanir..............................................passed
+When Urun detayına gidilir..................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
