@@ -1,12 +1,27 @@
-@n11
+  @n11
   Feature:n11 Mobil Uygulamasi
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
-      When Kategorilere tiklanir
-      When Elektronik tiklanir
-      When TelefonveAksesuarlari Secilir
-      When Cep telefonu secilir
-      When Marka secilir
+      Given Kategorilere tiklanir
+      And Elektronik tiklanir
+      Then TelefonveAksesuarlari Secilir
+      Then Cep telefonu secilir
+      Then Marka secilir
       When Filtrelemeye tiklanir
-      When Filtreleme yapilir
+      And Filtreleme yapilir
       When Sonuclarigostere tiklanir
-      When Urun detayına gidilir
+      And Urun detayına gidilir
+      Then Sepete urun eklenir
+      And  filtrelenen urunun mavi ve 128GB  oldugu dogrulanir
+      Then uygulama kapatilir
+
+
+    Scenario Template:Lenovo Thinkpad laptop arama sonuclarının lenovo icerdigi dogrulanır
+      Given arama kutusuna tiklanir
+      And  "<input>" yazilir ve arama yapilir
+      Then Arama sonuclarinin "<input>" icerdigi dogrulanır
+      And  uygulama kapatilir
+      Examples:
+        | input         |
+        |lenovo thinkpad|
+
+

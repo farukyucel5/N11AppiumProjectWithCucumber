@@ -1,6 +1,9 @@
 package stepDefinitions;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.n11Pages;
 import util.DriverFactory;
 public class n11StepDefinitions {
@@ -52,4 +55,37 @@ public class n11StepDefinitions {
     }
 
 
+    @Then("Sepete urun eklenir")
+    public void sepeteUrunEklenir() {
+        n11Pages.sepetEklemeTiklama();
+    }
+
+    @And("filtrelenen urunun mavi ve {int}GB  oldugu dogrulanir")
+    public void filtrelenenUrununMaviVeGBOlduguDogrulanir(int arg0) {
+        Assert.assertTrue(n11Pages.urunTextiAlinir().contains("Mavi"));
+        Assert.assertTrue(n11Pages.urunTextiAlinir().contains("128 GB"));
+    }
+
+
+    @Then("uygulama kapatilir")
+    public void uygulamaKapatilir() {
+        DriverFactory.closeDriver();
+    }
+
+
+    @Given("arama kutusuna tiklanir")
+    public void aramaKutusunaTiklanir() {
+        n11Pages.clickSearchBox();
+    }
+
+    @And("{string} yazilir ve arama yapilir")
+    public void yazilirVeAramaYapilir(String productName) {
+        n11Pages.typeSearchBoxAndHitEnter(productName);
+    }
+
+    @Then("Arama sonuclarinin {string} icerdigi dogrulanır")
+    public void aramaSonuclarininIcerdigiDogrulanır(String productName) {
+        n11Pages.verifyTheProductsListedContainLenovo(productName);
+
+    }
 }
