@@ -14,37 +14,42 @@ public class DriverFactory {
     public DriverFactory() {
 
     }
-    static AndroidDriver driver;
+    private static AndroidDriver driver;
     static DesiredCapabilities desiredCapabilities;
 
     public static AndroidDriver initializeTheN11Driver() {
         String platformName = ConfigReader.getProperty("platformName");
 
-        desiredCapabilities= new DesiredCapabilities();
-        if (platformName.equals("Android")) {
-            desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
-            desiredCapabilities.setCapability("platformVersion",ConfigReader.getProperty("platformVersionTablet"));
-            desiredCapabilities.setCapability("deviceName",ConfigReader.getProperty("deviceNameTablet"));
-            desiredCapabilities.setCapability("automationName",ConfigReader.getProperty("automationName"));
-            desiredCapabilities.setCapability("appPackage",ConfigReader.getProperty("n11Package"));
-            desiredCapabilities.setCapability("appActivity",ConfigReader.getProperty("n11Activity"));
+        if (driver == null) {
 
-            try {
-                driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"),desiredCapabilities);
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
+            desiredCapabilities = new DesiredCapabilities();
+            if (platformName.equals("Android")) {
+                desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
+                desiredCapabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersionTablet"));
+                desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceNameTablet"));
+                desiredCapabilities.setCapability("automationName", ConfigReader.getProperty("automationName"));
+                desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("n11Package"));
+                desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("n11Activity"));
+
+                try {
+                    driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
+
+
+                int impWait = 15;
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
             }
 
-
-            int impWait = 15;
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
         }
-
-
         return driver;
     }
 
     public static void closeDriver() {
-        driver.closeApp();
+        if (driver !=null) {
+            driver.quit();
+            driver = null;
+        }
     }
 }

@@ -133,41 +133,22 @@ public class n11Pages {
     public String urunTextiAlinir() {
         reuseableMethods.scrollTo("Aras Kargo: Kargon Ücretsiz!");
         return reuseableMethods.findingElement(productText).getText();
-        //    driver.findElement(productText).getText();
-
     }
 
     //========================================scenario2==============================================\\
 
     public void clickSearchBox() {
-        try{
-            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.presenceOfElementLocated(ad));
-            driver.findElement(ad).click();
-            wait.until(ExpectedConditions.presenceOfElementLocated(navigateBack));
-            driver.findElement(navigateBack).click();
-            wait.until(ExpectedConditions.presenceOfElementLocated(searchBar));
-            driver.findElement(searchBar).click();
-        }catch (Exception e) {
-            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.presenceOfElementLocated(searchBar));
-            driver.findElement(searchBar).click();
-
-        }
-
-
+            reuseableMethods.findingElement(searchBar).click();
     }
 
     public void typeSearchBoxAndHitEnter(String text) {
-        driver.findElement(searchBox).clear();
-        driver.findElement(searchBox).sendKeys(text, Keys.ENTER);
-        driver.findElement(searchElement).click();
+        reuseableMethods.findingElement(searchBox).clear();
+       reuseableMethods.findingElement(searchBox).sendKeys(text, Keys.ENTER);
+        reuseableMethods.findingElement(searchElement).click();
     }
 
     public void verifyTheProductsListedContainLenovo(String productName){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        wait.until(ExpectedConditions.presenceOfElementLocated(price));
-        driver.findElement(price).click();
+        reuseableMethods.findingElement(price).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(filteredProductList));
         List<WebElement> productList =driver.findElements(filteredProductList);
         productList.forEach(each-> System.out.println(each.getText()));

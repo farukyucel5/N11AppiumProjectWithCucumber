@@ -17,12 +17,11 @@ public class ReuseableMethods {
 
     public ReuseableMethods(AppiumDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+        this.wait = new WebDriverWait(driver,Duration.ofSeconds(40));
         this.action = new Actions(driver);
     }
     public WebElement presenceElement(By key){
-        return
-                wait.until(ExpectedConditions.presenceOfElementLocated(key));
+        return wait.until(ExpectedConditions.presenceOfElementLocated(key));
     }
     public WebElement findingElement(By key){
         WebElement element = presenceElement(key);
