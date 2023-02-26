@@ -24,7 +24,6 @@ public class n11Pages {
     By uygulaButonu = AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.dmall.mfandroid:id/applyBtn\")");
     By model = AppiumBy.androidUIAutomator("new UiSelector().text(\"Model\")");
     By iphone = AppiumBy.androidUIAutomator("new UiSelector().text(\"Iphone 13\")");
-    By renk = AppiumBy.androidUIAutomator("new UiSelector().text(\"Renk\")");
     By mavi = AppiumBy.androidUIAutomator("new UiSelector().text(\"Mavi\")");
     By sonucGoster = AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.dmall.mfandroid:id/giybiFilterShowResultsBTN\")");
     By urunTextButonu = AppiumBy.id("com.dmall.mfandroid:id/tvTitle");
@@ -62,8 +61,6 @@ public class n11Pages {
     }
 
     public void kategoriTiklama() {
-
-        //driver.findElement(kategorilerbutonu).click();
         reuseableMethods.findingElement(kategorilerbutonu).click();
     }
 
@@ -83,27 +80,14 @@ public class n11Pages {
     }
 
     public void markaSecimi() {
-
-        //driver.findElement(apple).click();
         reuseableMethods.findingElement(apple).click();
     }
 
     public void filtrelemeTiklama() {
-
-        //driver.findElement(filtrele).click();
         reuseableMethods.findingElement(filtrele).click();
     }
 
     public void filtrelemeYap() {
-       //driver.findElement(dahiliHafiza).click();
-       //driver.findElement(gb).click();
-       //driver.findElement(uygulaButonu).click();
-       //driver.findElement(model).click();
-       //driver.findElement(iphone).click();
-       //driver.findElement(uygulaButonu).click();
-       //reuseableMethods.clickAndScroll("Renk");
-       //driver.findElement(mavi).click();
-       //driver.findElement(uygulaButonu).click();
         reuseableMethods.findingElement(dahiliHafiza).click();
         reuseableMethods.findingElement(gb).click();
         reuseableMethods.findingElement(uygulaButonu).click();
@@ -116,35 +100,26 @@ public class n11Pages {
     }
 
     public void sonuclariGosterTiklama() {
-        //driver.findElement(sonucGoster).click();
         reuseableMethods.findingElement(sonucGoster).click();
 
     }
 
     public void addToBasketPlusButton() {
-
-      // driver.findElement(addToBasket1).click();
        reuseableMethods.findingElement(addToBasket1).click();
 
     }
 
     public void tekrarRenkVeHfizaSecimiYap() {
-       // driver.findElement(mavi).click();
-       // driver.findElement(gb).click();
-       // driver.findElement(continueToBasketButton).click();
         reuseableMethods.findingElement(mavi).click();
         reuseableMethods.findingElement(gb).click();
         reuseableMethods.findingElement(continueToBasketButton).click();
     }
 
     public void urunDetaySayfasinaTiklama(){
-       // wait.until(ExpectedConditions.presenceOfElementLocated(urunTextButonu));
-       // driver.findElement(urunTextButonu).click();
         reuseableMethods.findingElement(urunTextButonu).click();
     }
     public void sepetEklemeTiklama() {
         reuseableMethods.findingElement(sepeteEkle).click();
-        //driver.findElement(sepeteEkle).click();
 
     }
 
