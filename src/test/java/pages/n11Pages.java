@@ -31,6 +31,14 @@ public class n11Pages {
 
     By sepeteEkle = AppiumBy.id("com.dmall.mfandroid:id/pdpAddToCartButton");
 
+    By addToBasket1=AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.dmall.mfandroid:id/ivAddToBasket\")");
+
+    By continueToBasketButton =AppiumBy.id("com.dmall.mfandroid:id/continueButton");
+
+    By cartIcon = AppiumBy.accessibilityId("Sepetim, 1 yeni bildirim");
+    By productText = AppiumBy.id("com.dmall.mfandroid:id/skuOptionsTV");
+
+
     //==================================scenarion2====================================================\\
 
     By searchBar = AppiumBy.id("com.dmall.mfandroid:id/tvHomeSearchBar");
@@ -46,6 +54,7 @@ public class n11Pages {
 
     By filteredProductList=AppiumBy.id("com.dmall.mfandroid:id/tvTitle");
 
+
     public n11Pages(AppiumDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -53,7 +62,9 @@ public class n11Pages {
     }
 
     public void kategoriTiklama() {
-        driver.findElement(kategorilerbutonu).click();
+
+        //driver.findElement(kategorilerbutonu).click();
+        reuseableMethods.findingElement(kategorilerbutonu).click();
     }
 
     public void elektronikTiklama() {
@@ -72,41 +83,83 @@ public class n11Pages {
     }
 
     public void markaSecimi() {
-        driver.findElement(apple).click();
+
+        //driver.findElement(apple).click();
+        reuseableMethods.findingElement(apple).click();
     }
 
     public void filtrelemeTiklama() {
-        driver.findElement(filtrele).click();
+
+        //driver.findElement(filtrele).click();
+        reuseableMethods.findingElement(filtrele).click();
     }
 
     public void filtrelemeYap() {
-        driver.findElement(dahiliHafiza).click();
-        driver.findElement(gb).click();
-        driver.findElement(uygulaButonu).click();
-        driver.findElement(model).click();
-        driver.findElement(iphone).click();
-        driver.findElement(uygulaButonu).click();
+       //driver.findElement(dahiliHafiza).click();
+       //driver.findElement(gb).click();
+       //driver.findElement(uygulaButonu).click();
+       //driver.findElement(model).click();
+       //driver.findElement(iphone).click();
+       //driver.findElement(uygulaButonu).click();
+       //reuseableMethods.clickAndScroll("Renk");
+       //driver.findElement(mavi).click();
+       //driver.findElement(uygulaButonu).click();
+        reuseableMethods.findingElement(dahiliHafiza).click();
+        reuseableMethods.findingElement(gb).click();
+        reuseableMethods.findingElement(uygulaButonu).click();
+        reuseableMethods.findingElement(model).click();
+        reuseableMethods.findingElement(iphone).click();
+        reuseableMethods.findingElement(uygulaButonu).click();
         reuseableMethods.clickAndScroll("Renk");
-        driver.findElement(mavi).click();
-        driver.findElement(uygulaButonu).click();
+        reuseableMethods.findingElement(mavi).click();
+        reuseableMethods.findingElement(uygulaButonu).click();
     }
 
     public void sonuclariGosterTiklama() {
-        driver.findElement(sonucGoster).click();
+        //driver.findElement(sonucGoster).click();
+        reuseableMethods.findingElement(sonucGoster).click();
 
     }
 
-    public void urunDeatayaTıkla() {
-        driver.findElement(urunTextButonu).click();
+    public void addToBasketPlusButton() {
+
+      // driver.findElement(addToBasket1).click();
+       reuseableMethods.findingElement(addToBasket1).click();
+
     }
 
+    public void tekrarRenkVeHfizaSecimiYap() {
+       // driver.findElement(mavi).click();
+       // driver.findElement(gb).click();
+       // driver.findElement(continueToBasketButton).click();
+        reuseableMethods.findingElement(mavi).click();
+        reuseableMethods.findingElement(gb).click();
+        reuseableMethods.findingElement(continueToBasketButton).click();
+    }
+
+    public void urunDetaySayfasinaTiklama(){
+       // wait.until(ExpectedConditions.presenceOfElementLocated(urunTextButonu));
+       // driver.findElement(urunTextButonu).click();
+        reuseableMethods.findingElement(urunTextButonu).click();
+    }
     public void sepetEklemeTiklama() {
-        driver.findElement(sepeteEkle).click();
+        reuseableMethods.findingElement(sepeteEkle).click();
+        //driver.findElement(sepeteEkle).click();
+
+    }
+
+
+    public void goToTheCart(){
+        //driver.findElement(cartIcon).click();
+        reuseableMethods.findingElement(cartIcon).click();
 
     }
 
     public String urunTextiAlinir() {
-        return reuseableMethods.scrollToelementAndGetText("RENK: Kırmızı, DAHİLİ HAFIZA: 128 GB");
+        reuseableMethods.scrollTo("Aras Kargo: Kargon Ücretsiz!");
+        return reuseableMethods.findingElement(productText).getText();
+        //    driver.findElement(productText).getText();
+
     }
 
     //========================================scenario2==============================================\\

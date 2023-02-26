@@ -48,16 +48,35 @@ public class n11StepDefinitions {
         n11Pages.sonuclariGosterTiklama();
     }
 
+    @And("artı butonuna basılır")
+    public void artıButonunaBasılır() {
+        n11Pages.addToBasketPlusButton();
+    }
+
+    @Then("tekrar renk ve dahili hafiza secimi yapilir")
+    public void tekrarRenkVeDahiliHafizaSecimiYapilir() {
+        n11Pages.tekrarRenkVeHfizaSecimiYap();
+    }
+
+    @Then("Sepete ikonuna basilir")
+    public void sepeteIkonunaBasilir() {
+        n11Pages.goToTheCart();
+
+    }
+
+
 
     @When("Urun detayına gidilir")
     public void urunDetayınaGidilir() {
-        n11Pages.urunDeatayaTıkla();
+        n11Pages.urunDetaySayfasinaTiklama();
+
     }
 
 
     @Then("Sepete urun eklenir")
     public void sepeteUrunEklenir() {
         n11Pages.sepetEklemeTiklama();
+
     }
 
     @And("filtrelenen urunun mavi ve {int}GB  oldugu dogrulanir")
@@ -88,4 +107,6 @@ public class n11StepDefinitions {
         n11Pages.verifyTheProductsListedContainLenovo(productName);
 
     }
+
+
 }

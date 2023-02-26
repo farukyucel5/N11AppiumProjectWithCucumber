@@ -17,14 +17,14 @@ public class ReuseableMethods {
 
     public ReuseableMethods(AppiumDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         this.action = new Actions(driver);
     }
     public WebElement presenceElement(By key){
         return
                 wait.until(ExpectedConditions.presenceOfElementLocated(key));
     }
-    public WebElement findElement(By key){
+    public WebElement findingElement(By key){
         WebElement element = presenceElement(key);
         return element;
     }
@@ -51,6 +51,8 @@ public class ReuseableMethods {
         AppiumBy.ByAndroidUIAutomator permissionElement = new AppiumBy.ByAndroidUIAutomator("new UiScrollable" +
                 "(new UiSelector().scrollable(true).instance(0))." +
                 "scrollIntoView(new UiSelector()" + ".textMatches(\"" + textFromOutside + "\").instance(0))");
+
+        driver.findElement(permissionElement);
 
     }
 
