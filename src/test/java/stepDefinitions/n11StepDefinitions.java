@@ -53,11 +53,6 @@ public class n11StepDefinitions {
         n11Pages.addToBasketPlusButton();
     }
 
-    @Then("tekrar renk ve dahili hafiza secimi yapilir")
-    public void tekrarRenkVeDahiliHafizaSecimiYapilir() {
-        n11Pages.tekrarRenkVeHfizaSecimiYap();
-    }
-
     @Then("Sepete ikonuna basilir")
     public void sepeteIkonunaBasilir() {
         n11Pages.goToTheCart();

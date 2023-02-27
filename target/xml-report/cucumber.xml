@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="178.419">
-    <testcase classname="n11 Mobil Uygulamasi" name="n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu" time="73.751">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="73.426">
+    <testcase classname="n11 Mobil Uygulamasi" name="n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu" time="72.9">
         <system-out><![CDATA[Given Kategorilere tiklanir.................................................passed
 And Elektronik tiklanir.....................................................passed
 Then TelefonveAksesuarlari Secilir..........................................passed
@@ -10,40 +10,9 @@ When Filtrelemeye tiklanir..................................................pass
 And Filtreleme yapilir......................................................passed
 When Sonuclarigostere tiklanir..............................................passed
 And artı butonuna basılır...................................................passed
-Then tekrar renk ve dahili hafiza secimi yapilir............................passed
 Then Sepete ikonuna basilir.................................................passed
 And filtrelenen urunun mavi ve 128GB  oldugu dogrulanir.....................passed
 Then uygulama kapatilir.....................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="n11 Mobil Uygulamasi" name="n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu 2" time="66.876">
-        <failure message="" type="java.lang.AssertionError"><![CDATA[Given Kategorilere tiklanir.................................................passed
-And Elektronik tiklanir.....................................................passed
-Then TelefonveAksesuarlari Secilir..........................................passed
-Then Cep telefonu secilir...................................................passed
-Then Marka secilir..........................................................passed
-When Filtrelemeye tiklanir..................................................passed
-And Filtreleme yapilir......................................................passed
-When Sonuclarigostere tiklanir..............................................passed
-And Urun detayına gidilir...................................................passed
-Then Sepete urun eklenir....................................................passed
-And filtrelenen urunun mavi ve 128GB  oldugu dogrulanir.....................failed
-Then uygulama kapatilir.....................................................skipped
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepDefinitions.n11StepDefinitions.filtrelenenUrununMaviVeGBOlduguDogrulanir(n11StepDefinitions.java:84)
-	at ✽.filtrelenen urunun mavi ve 128GB  oldugu dogrulanir(file:///C:/Asoftware/AppiumN11ProjectWithCucumber/src/test/java/features/n11.feature:32)
-]]></failure>
-    </testcase>
-    <testcase classname="n11 Mobil Uygulamasi" name="Lenovo Thinkpad laptop arama sonuclarının lenovo icerdigi dogrulanır" time="37.339">
-        <system-out><![CDATA[Given arama kutusuna tiklanir...............................................passed
-And "lenovo thinkpad" yazilir ve arama yapilir..............................passed
-Then Arama sonuclarinin "lenovo thinkpad" icerdigi dogrulanır...............passed
-And uygulama kapatilir......................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

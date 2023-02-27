@@ -1,5 +1,5 @@
-  @n11
   Feature:n11 Mobil Uygulamasi
+    @smoke1
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
       Given Kategorilere tiklanir
       And Elektronik tiklanir
@@ -10,14 +10,13 @@
       And Filtreleme yapilir
       When Sonuclarigostere tiklanir
       And  artı butonuna basılır
-      Then tekrar renk ve dahili hafiza secimi yapilir
       Then Sepete ikonuna basilir
       And  filtrelenen urunun mavi ve 128GB  oldugu dogrulanir
       Then uygulama kapatilir
 
 
 
-    @smoke
+    @smoke2
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
       Given Kategorilere tiklanir
       And Elektronik tiklanir
@@ -32,7 +31,7 @@
       And  filtrelenen urunun mavi ve 128GB  oldugu dogrulanir
       Then uygulama kapatilir
 
-    @smoke
+    @smoke3
     Scenario Template:Lenovo Thinkpad laptop arama sonuclarının lenovo icerdigi dogrulanır
       Given arama kutusuna tiklanir
       And  "<input>" yazilir ve arama yapilir

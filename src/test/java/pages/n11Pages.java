@@ -109,12 +109,6 @@ public class n11Pages {
 
     }
 
-    public void tekrarRenkVeHfizaSecimiYap() {
-        reuseableMethods.findingElement(mavi).click();
-        reuseableMethods.findingElement(gb).click();
-        reuseableMethods.findingElement(continueToBasketButton).click();
-    }
-
     public void urunDetaySayfasinaTiklama(){
         reuseableMethods.findingElement(urunTextButonu).click();
     }
