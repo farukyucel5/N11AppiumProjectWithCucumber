@@ -1,4 +1,4 @@
 Feature: N11 app mobile test c_01
-
+  @smoke
   Scenario: N11 searchbox test
-    Given Type "Kulaklık" in the searchBox
+    Given Type "Kulaklik" in the searchBox

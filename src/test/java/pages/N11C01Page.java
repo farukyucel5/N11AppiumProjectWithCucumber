@@ -2,6 +2,7 @@ package pages;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,7 +30,7 @@ public class N11C01Page {
 
     public void typeIn(String text){
         switch (text){
-            case "Kulaklık"-> {
+            case "Kulaklik"-> {
                 reuseableMethods.findingElement(searchBox).click();
                 reuseableMethods.findingElement(searchBar).sendKeys(text);
                 reuseableMethods.findingElement(searchElement).click();

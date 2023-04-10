@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="73.426">
-    <testcase classname="n11 Mobil Uygulamasi" name="n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu" time="72.9">
-        <system-out><![CDATA[Given Kategorilere tiklanir.................................................passed
-And Elektronik tiklanir.....................................................passed
-Then TelefonveAksesuarlari Secilir..........................................passed
-Then Cep telefonu secilir...................................................passed
-Then Marka secilir..........................................................passed
-When Filtrelemeye tiklanir..................................................passed
-And Filtreleme yapilir......................................................passed
-When Sonuclarigostere tiklanir..............................................passed
-And artı butonuna basılır...................................................passed
-Then Sepete ikonuna basilir.................................................passed
-And filtrelenen urunun mavi ve 128GB  oldugu dogrulanir.....................passed
-Then uygulama kapatilir.....................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.981">
+    <testcase classname="N11 app mobile test c_01" name="N11 searchbox test" time="15.86">
+        <system-out><![CDATA[Given Type "Kulaklik" in the searchBox......................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
