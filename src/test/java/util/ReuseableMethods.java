@@ -21,6 +21,7 @@ public class ReuseableMethods {
         this.action = new Actions(driver);
     }
     public WebElement presenceElement(By key){
+
         return wait.until(ExpectedConditions.presenceOfElementLocated(key));
     }
     public WebElement findingElement(By key){
