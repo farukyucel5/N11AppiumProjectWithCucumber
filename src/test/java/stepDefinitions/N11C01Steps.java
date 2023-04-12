@@ -7,7 +7,7 @@ import util.DriverFactory;
 public class N11C01Steps {
     N11C01Page n11C01Page =new N11C01Page(DriverFactory.initializeTheN11Driver());
     @Given("Type {string} in the searchBox")
-    public void typeInTheSearchBox(String element) {
+    public void typeInTheSearchBox(String element) throws InterruptedException {
         n11C01Page.typeIn(element);
     }
 }

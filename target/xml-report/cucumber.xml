@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.981">
-    <testcase classname="N11 app mobile test c_01" name="N11 searchbox test" time="15.86">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.655">
+    <testcase classname="N11 app mobile test c_01" name="N11 searchbox test" time="16.545">
         <system-out><![CDATA[Given Type "Kulaklik" in the searchBox......................................passed
 ]]></system-out>
     </testcase>
