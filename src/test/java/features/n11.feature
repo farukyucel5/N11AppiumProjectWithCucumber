@@ -1,5 +1,15 @@
   Feature:n11 Mobil Uygulamasi
-    @smoke1
+
+     Background: common parts
+      Given Type "Kulaklik" in the searchBox
+
+    @smoke
+    Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
+      Given Kategorilere tiklanir
+      And Elektronik tiklanir
+      Then TelefonveAksesuarlari Secilir
+      Then Cep telefonu secilir
+
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
       Given Kategorilere tiklanir
       And Elektronik tiklanir
@@ -16,7 +26,7 @@
 
 
 
-    @smoke2
+
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
       Given Kategorilere tiklanir
       And Elektronik tiklanir
@@ -31,7 +41,7 @@
       And  filtrelenen urunun mavi ve 128GB  oldugu dogrulanir
       Then uygulama kapatilir
 
-    @smoke3
+
     Scenario Template:Lenovo Thinkpad laptop arama sonuclarının lenovo icerdigi dogrulanır
       Given arama kutusuna tiklanir
       And  "<input>" yazilir ve arama yapilir

@@ -7,7 +7,7 @@ import org.junit.Assert;
 import pages.n11Pages;
 import util.DriverFactory;
 public class n11StepDefinitions {
-    n11Pages n11Pages = new n11Pages(DriverFactory.initializeTheN11Driver());
+    n11Pages n11Pages = new n11Pages(DriverFactory.driver);
     @When("Kategorilere tiklanir")
     public void kategorilereTiklanir() {
         n11Pages.kategoriTiklama();

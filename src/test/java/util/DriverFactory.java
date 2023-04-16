@@ -1,13 +1,10 @@
 package util;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
@@ -15,10 +12,10 @@ public class DriverFactory {
 
     }
 
-    private static AndroidDriver driver;
+    public static AndroidDriver driver;
     static DesiredCapabilities desiredCapabilities;
 
-    public static AndroidDriver initializeTheN11Driver() {
+    public static void initializeTheN11Driver() {
         String platformName = ConfigReader.getProperty("platformName");
 
 
@@ -41,7 +38,6 @@ public class DriverFactory {
             int impWait = 15;
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
         }
-        return driver;
     }
 
 

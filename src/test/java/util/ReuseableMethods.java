@@ -2,6 +2,7 @@ package util;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,14 +12,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ReuseableMethods {
-    AppiumDriver driver;
+    AndroidDriver driver;
     WebDriverWait wait;
     Actions action;
 
-    public ReuseableMethods(AppiumDriver driver){
-        this.driver = driver;
+    public ReuseableMethods(AndroidDriver driver){
+        this.driver=driver;
         this.wait = new WebDriverWait(driver,Duration.ofSeconds(40));
         this.action = new Actions(driver);
+
     }
     public WebElement presenceElement(By key){
 

@@ -1,19 +1,25 @@
 package pages;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import util.DriverFactory;
 import util.ReuseableMethods;
 
+import javax.swing.*;
 import java.time.Duration;
 import java.util.List;
 
 public class n11Pages {
-    AppiumDriver driver;
+    AndroidDriver driver;
     WebDriverWait wait;
     ReuseableMethods reuseableMethods;
     By kategorilerbutonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Kategoriler\")");
@@ -54,10 +60,10 @@ public class n11Pages {
     By filteredProductList=AppiumBy.id("com.dmall.mfandroid:id/tvTitle");
 
 
-    public n11Pages(AppiumDriver driver){
-        this.driver = driver;
+    public n11Pages(AndroidDriver driver){
+        this.driver=driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        this.reuseableMethods = new ReuseableMethods(driver);
+        this.reuseableMethods=new ReuseableMethods(driver);
     }
 
     public void kategoriTiklama() {
@@ -77,6 +83,11 @@ public class n11Pages {
     public void cepTelefonuSecimi() {
         List <WebElement> ListofElement = driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"com.dmall.mfandroid:id/ivCategoryItem\")"));
         ListofElement.get(0).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void markaSecimi() {
