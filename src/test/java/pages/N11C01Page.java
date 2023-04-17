@@ -24,6 +24,12 @@ public class N11C01Page {
     By sepetim=AppiumBy.androidUIAutomator("new UiSelector().text(\"Sepetim\")");
 
     By odemeyeGec=AppiumBy.androidUIAutomator("new UiSelector().text(\"Ödemeye Geç\")");
+
+    By productSearchedFor=AppiumBy.androidUIAutomator("new UiSelector().text(\"Huawei FreeBuds 5i Bluetooth Kulak İçi Kulaklık\")");
+
+    By secondProduct=AppiumBy.androidUIAutomator("new UiSelector().text(\"Qcy T5 Bluetooth 5.1 Kulak İçi Kulaklık\")");
+
+
    public N11C01Page(AndroidDriver driver){
        this.driver=driver;
        this.reuseableMethods=new ReuseableMethods(driver);
@@ -36,7 +42,6 @@ public class N11C01Page {
                 reuseableMethods.findingElement(searchBox).click();
                 reuseableMethods.findingElement(searchBar).sendKeys(text);
                 driver.pressKey(new KeyEvent(AndroidKey.ENTER));
-                driver.pressKey(new KeyEvent(AndroidKey.PAGE_DOWN));
             }
         }
 
@@ -55,6 +60,13 @@ public class N11C01Page {
                 Assert.assertTrue(reuseableMethods.findingElement(odemeyeGec).isDisplayed());
             }
         }
+    }
+
+    public void scrollDown(String element){
+       switch (element){
+           case "Huawei"->reuseableMethods.scrollForMobile(productSearchedFor);
+           case "Qcy" ->reuseableMethods.scrollTo("Qcy T5 Bluetooth 5.1 Kulak İçi Kulaklık");
+       }
     }
 
 

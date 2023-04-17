@@ -1,15 +1,5 @@
   Feature:n11 Mobil Uygulamasi
 
-     Background: common parts
-      Given Type "Kulaklik" in the searchBox
-
-    @smoke
-    Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
-      Given Kategorilere tiklanir
-      And Elektronik tiklanir
-      Then TelefonveAksesuarlari Secilir
-      Then Cep telefonu secilir
-
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
       Given Kategorilere tiklanir
       And Elektronik tiklanir
@@ -23,9 +13,6 @@
       Then Sepete ikonuna basilir
       And  filtrelenen urunun mavi ve 128GB  oldugu dogrulanir
       Then uygulama kapatilir
-
-
-
 
     Scenario:n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu
       Given Kategorilere tiklanir

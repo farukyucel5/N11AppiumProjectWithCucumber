@@ -1,10 +1,14 @@
 package stepDefinitions;
 
+import io.appium.java_client.android.nativekey.AndroidKey;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.N11C01Page;
 import util.DriverFactory;
+import util.ReuseableMethods;
+
+import java.awt.*;
 
 public class N11C01Steps {
     N11C01Page n11C01Page =new N11C01Page(DriverFactory.driver);
@@ -26,5 +30,12 @@ public class N11C01Steps {
     @Then("Close the app")
     public void closeTheApp() {
         DriverFactory.closeDriver();
+    }
+
+
+    @And("Scroll down to the {string}")
+    public void scrollDownToThe(String element) {
+        n11C01Page.scrollDown(element);
+
     }
 }

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="23.357">
-    <testcase classname="n11 Mobil Uygulamasi" name="n11 Mobil Uygulamasi ile Telefon Satin Alma Otomasyonu" time="23.24">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.897">
+    <testcase classname="N11 app mobile test c_01" name="Scroll down2" time="25.628">
         <system-out><![CDATA[Given Type "Kulaklik" in the searchBox......................................passed
-Given Kategorilere tiklanir.................................................passed
-And Elektronik tiklanir.....................................................passed
-Then TelefonveAksesuarlari Secilir..........................................passed
-Then Cep telefonu secilir...................................................passed
+And Scroll down to the "Qcy"................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

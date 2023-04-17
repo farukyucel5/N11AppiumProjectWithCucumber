@@ -6,3 +6,11 @@ Feature: N11 app mobile test c_01
     Then click the "sepetim"
     And verify that "Ödemeye Geç" is visible
     Then Close the app
+
+  Scenario: Scroll down
+    Given Type "Kulaklik" in the searchBox
+    And Scroll down to the "Huawei"
+  @smoke
+  Scenario: Scroll down2
+    Given Type "Kulaklik" in the searchBox
+    And Scroll down to the "Qcy"
