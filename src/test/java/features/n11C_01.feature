@@ -10,6 +10,7 @@ Feature: N11 app mobile test c_01
   Scenario: Scroll down
     Given Type "Kulaklik" in the searchBox
     And Scroll down to the "Huawei"
+
   @smoke
   Scenario: Scroll down2
     Given Type "Kulaklik" in the searchBox
