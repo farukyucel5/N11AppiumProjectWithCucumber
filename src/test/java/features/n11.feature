@@ -39,3 +39,27 @@
         |lenovo thinkpad|
 
 
+    @smoke
+    Scenario: Dropdowns
+      Given click the "Kategoriler"
+      And  click the "Otomotiv & Motosiklet"
+      And  click the "Yedek Parça"
+      And click the "Egzoz"
+      And click the "Filtrele"
+      Then click the "Teslimat Adresi Seç"
+      And click the "Şehir Seç"
+      Then Scroll down to the "İstanbul"
+      And click the "İlçe Seç"
+      Then Scroll down to the "Beşiktaş"
+      And click the "Onayla"
+      And click the "Sonuçları Göster"
+      And verify that "AYNI GÜN TESLİMAT" is visible
+
+      
+
+
+
+
+
+
+
