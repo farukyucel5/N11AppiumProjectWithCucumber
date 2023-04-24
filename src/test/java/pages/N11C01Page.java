@@ -83,6 +83,10 @@ public class N11C01Page {
             case "AYNI GÜN TESLİMAT"->{
                 List<WebElement> ayniGunTagList=driver.
                         findElements(reuseableMethods.locateElementByText("AYNI GÜN TESLİMAT"));
+               // for (WebElement each:ayniGunTagList) {
+               //     Assert.assertEquals(each.getText(),"AYNI GÜN TESLİMAT");
+               // }
+                ayniGunTagList.forEach(each->Assert.assertEquals(each.getText(),"AYNI GÜN TESLİMAT"));
             }
         }
     }
