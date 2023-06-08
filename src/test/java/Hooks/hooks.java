@@ -7,8 +7,6 @@ public class hooks {
 
     @Before
     public void instantiateTheDriver(){
-
         DriverFactory.initializeTheN11Driver();
-
     }
 }
