@@ -10,13 +10,13 @@ import util.ReuseableMethods;
 
 import java.time.Duration;
 
-public class AndroidKeyPage {
+public class KeyEventsPage {
     AndroidDriver driver;
     ReuseableMethods reuseableMethods;
 
     WebDriverWait wait;
 
-    public AndroidKeyPage(AndroidDriver driver){
+    public KeyEventsPage(AndroidDriver driver){
         this.driver=driver;
         this.reuseableMethods=new ReuseableMethods(driver);
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -25,20 +25,19 @@ public class AndroidKeyPage {
     By searchBox= AppiumBy.id("com.dmall.mfandroid:id/tvHomeSearchBar");
     By searchBar=AppiumBy.id("com.dmall.mfandroid:id/etSearch");
 
-    public void activateTheSearchBox(){
+    public void clickOnTheSearchBox(){
         reuseableMethods.findingElement(searchBox).click();
     }
-    public void typeIn(String text) {
+    public void typeIn(String text){
         reuseableMethods.findingElement(searchBar).sendKeys(text);
     }
 
     public void pressOnTheKey(String key){
         switch (key){
-            case "Space"-> driver.pressKey(new KeyEvent(AndroidKey.SPACE));
-            case "Enter"->driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+            case "Space"->driver.pressKey(new KeyEvent(AndroidKey.SPACE));
             case "Backspace"->driver.pressKey(new KeyEvent(AndroidKey.BACK));
-
+            case "Enter"-> driver.pressKey(new KeyEvent(AndroidKey.ENTER));
+            case "Tab"->driver.pressKey(new KeyEvent(AndroidKey.TAB));
         }
-
     }
 }

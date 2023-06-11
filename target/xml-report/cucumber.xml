@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.151">
-    <testcase classname="AndroidKey" name="AndroidKey events1" time="16.027">
-        <system-out><![CDATA[Given Click on the searchbox................................................passed
-Given type "Mobile" in the searchBox........................................passed
-And press on the key "Space"................................................passed
-Given type "phone" in the searchBox.........................................passed
-And press on the key "Enter"................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.351">
+    <testcase classname="Android key events" name="Key events" time="26.052">
+        <system-out><![CDATA[Given Click on the search box...............................................passed
+And type "Mobile" in the search box.........................................passed
+Then press on the key "Space"...............................................passed
+And press on the key "Backspace"............................................passed
+And type "phone" in the search box..........................................passed
+Then press on the key "Enter"...............................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

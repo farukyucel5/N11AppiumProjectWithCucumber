@@ -28,8 +28,6 @@ public class N11C01Page {
 
     By productSearchedFor=AppiumBy.androidUIAutomator("new UiSelector().text(\"Huawei FreeBuds 5i Bluetooth Kulak İçi Kulaklık\")");
 
-    By secondProduct=AppiumBy.androidUIAutomator("new UiSelector().text(\"Qcy T5 Bluetooth 5.1 Kulak İçi Kulaklık\")");
-
 
    public N11C01Page(AndroidDriver driver){
        this.driver=driver;
