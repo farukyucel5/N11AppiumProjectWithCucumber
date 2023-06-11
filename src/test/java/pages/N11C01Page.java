@@ -43,7 +43,6 @@ public class N11C01Page {
                 reuseableMethods.findingElement(searchBox).click();
                 reuseableMethods.findingElement(searchBar).sendKeys(text);
                 driver.pressKey(new KeyEvent(AndroidKey.ENTER));
-
             }
         }
 

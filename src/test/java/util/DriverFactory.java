@@ -23,7 +23,7 @@ public class DriverFactory {
         if (platformName.equals("Android")) {
             desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
             desiredCapabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
-            desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceNameTablet"));
+            desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
             desiredCapabilities.setCapability("automationName", ConfigReader.getProperty("automationName"));
             desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("n11Package"));
             desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("n11Activity"));

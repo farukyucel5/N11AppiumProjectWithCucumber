@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="43.137">
-    <testcase classname="N11 app mobile test c_01" name="Dropdown" time="42.895">
-        <system-out><![CDATA[Given click the "Kategoriler"...............................................passed
-And click the "Otomotiv & Motosiklet".......................................passed
-And click the "Yedek Parça".................................................passed
-And click the "Egzoz".......................................................passed
-And click the "Filtrele"....................................................passed
-And click the "Teslimat Adresi Seç".........................................passed
-Then click the "Şehir Seç"..................................................passed
-And Scroll down to the "İstanbul"...........................................passed
-And click the "İlçe Seç"....................................................passed
-Then Scroll down to the "Beşiktaş"..........................................passed
-And click the "Onayla"......................................................passed
-Then click the "Sonuçları Göster"...........................................passed
-And verify that "AYNI GÜN TESLİMAT" is visible..............................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.151">
+    <testcase classname="AndroidKey" name="AndroidKey events1" time="16.027">
+        <system-out><![CDATA[Given Click on the searchbox................................................passed
+Given type "Mobile" in the searchBox........................................passed
+And press on the key "Space"................................................passed
+Given type "phone" in the searchBox.........................................passed
+And press on the key "Enter"................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>

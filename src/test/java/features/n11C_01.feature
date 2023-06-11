@@ -15,7 +15,7 @@ Feature: N11 app mobile test c_01
   Scenario: Scroll down2
     Given Type "Kulaklik" in the searchBox
     And Scroll down to the "Qcy"
-  @smoke
+
   Scenario: Dropdown
     Given click the "Kategoriler"
     And click the "Otomotiv & Motosiklet"
@@ -30,8 +30,5 @@ Feature: N11 app mobile test c_01
     And click the "Onayla"
     Then click the "Sonuçları Göster"
     And verify that "AYNI GÜN TESLİMAT" is visible
-    
-    
-
 
 
