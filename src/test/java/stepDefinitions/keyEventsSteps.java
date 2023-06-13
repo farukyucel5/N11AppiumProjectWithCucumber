@@ -22,4 +22,9 @@ public class keyEventsSteps {
     public void pressOnTheKey(String key) {
         keyEventsPage.pressOnTheKey(key);
     }
+
+    @Then("Click on the first element")
+    public void clickOnTheFirstElement() {
+        keyEventsPage.clickOnTheFirstElement();
+    }
 }

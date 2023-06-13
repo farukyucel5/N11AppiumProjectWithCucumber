@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.ReuseableMethods;
 
@@ -39,5 +40,10 @@ public class KeyEventsPage {
             case "Enter"-> driver.pressKey(new KeyEvent(AndroidKey.ENTER));
             case "Tab"->driver.pressKey(new KeyEvent(AndroidKey.TAB));
         }
+    }
+    By firstElement=AppiumBy.xpath("(//android.widget.ImageView[@resource-id='com.dmall.mfandroid:id/ivImage'])[1]");
+
+    public void clickOnTheFirstElement(){
+        reuseableMethods.findingElement(firstElement).click();
     }
 }

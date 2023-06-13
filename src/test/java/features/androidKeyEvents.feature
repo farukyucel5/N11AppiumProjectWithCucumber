@@ -9,4 +9,5 @@ Feature: Android key events
     And press on the key "Backspace"
     And type "phone" in the search box
     Then press on the key "Enter"
+    Then Click on the first element
 
