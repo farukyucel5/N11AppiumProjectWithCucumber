@@ -1,9 +1,8 @@
 package util;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 
 public class DriverFactory {
@@ -18,23 +17,17 @@ public class DriverFactory {
     public static void initializeTheN11Driver() {
         String platformName = ConfigReader.getProperty("platformName");
 
+        UiAutomator2Options options=new UiAutomator2Options();
 
-        desiredCapabilities = new DesiredCapabilities();
         if (platformName.equals("Android")) {
-            desiredCapabilities.setCapability("platformName", ConfigReader.getProperty("platformName"));
-            desiredCapabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
-            desiredCapabilities.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
-            desiredCapabilities.setCapability("automationName", ConfigReader.getProperty("automationName"));
-            desiredCapabilities.setCapability("appPackage", ConfigReader.getProperty("n11Package"));
-            desiredCapabilities.setCapability("appActivity", ConfigReader.getProperty("n11Activity"));
+            options.setPlatformName(ConfigReader.getProperty("platformName"));
+            options.setPlatformVersion(ConfigReader.getProperty("platformVersion"));
+            options.setDeviceName(ConfigReader.getProperty("deviceName"));
+            options.setAutomationName(ConfigReader.getProperty("automationName"));
+            options.setAppPackage(ConfigReader.getProperty("n11Package"));
+            options.setAppActivity(ConfigReader.getProperty("n11Activity"));
 
-            try {
-                driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
-            }
-
-
+            driver = new AndroidDriver(options);
             int impWait = 15;
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
         }
