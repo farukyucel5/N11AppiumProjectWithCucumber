@@ -10,4 +10,3 @@ Feature: Android key events
     And type "phone" in the search box
     Then press on the key "Enter"
     Then Click on the first element
-

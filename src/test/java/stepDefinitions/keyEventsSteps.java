@@ -4,9 +4,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.KeyEventsPage;
 import util.DriverFactory;
+
+import javax.imageio.ImageTypeSpecifier;
+import java.awt.*;
+import java.io.File;
 
 public class keyEventsSteps {
     KeyEventsPage keyEventsPage=new KeyEventsPage(DriverFactory.driver);
