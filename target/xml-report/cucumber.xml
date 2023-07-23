@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="29.709">
-    <testcase classname="Android key events" name="Key events" time="29.519">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.538">
+    <testcase classname="Android key events" name="Key events" time="33.303">
         <system-out><![CDATA[Given Click on the search box...............................................passed
 And type "Mobile" in the search box.........................................passed
 Then press on the key "Space"...............................................passed

@@ -3,8 +3,12 @@ package util;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.cucumber.java.hu.De;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
 public class DriverFactory {
@@ -17,7 +21,8 @@ public class DriverFactory {
 
     public static void initializeTheN11Driver() {
         String platformName = ConfigReader.getProperty("platformName");
-        if (platformName.equals("Android")) {
+
+        if (platformName.equals("Android")){
             UiAutomator2Options options=new UiAutomator2Options()
                     .setPlatformName(ConfigReader.getProperty("platformName"))
                     .setPlatformVersion(ConfigReader.getProperty("platformVersion"))
@@ -26,9 +31,7 @@ public class DriverFactory {
                     .setAppPackage(ConfigReader.getProperty("n11Package"))
                     .setAppActivity(ConfigReader.getProperty("n11Activity"));
 
-            driver = new AndroidDriver(options);
-            int impWait = 15;
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(impWait));
+            driver=new AndroidDriver(options);
         }
     }
 
