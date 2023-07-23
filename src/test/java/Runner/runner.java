@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
        },
         features = {"src/test/java/features"},
         glue = {"stepDefinitions","Hooks"},
-        tags= "@example",
+        tags= "@smoke",
         dryRun = false
 )
 
